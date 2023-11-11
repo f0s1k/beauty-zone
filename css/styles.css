@@ -47,10 +47,22 @@ body {
     font-size: 16px;
     color: var(--color-primary-dark);
     font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    margin-top: 0;
 }
 
 a {
     text-decoration: none;
+    display: inline-block;
 }
 
 address {
@@ -67,6 +79,19 @@ h2 {
     color: var(--color-primary-light);
 }
 
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1288px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
 /* Links */
 .header-link {
     font-size: 18px;
@@ -74,7 +99,6 @@ h2 {
 }
 
 .header-link:hover {
-    font-weight: 700;
     color: var(--color-primary-light);
 }
 
@@ -83,17 +107,58 @@ footer a {
 }
 
 footer a:hover {
-    font-weight: 700;
     color: var(--color-primary-light);
 }
 
 /* Header */
+.header {
+    background-color: #e7e4e4; /* remove */
+    height: 106px;
+    display: flex;
+    align-items: center;
+}
+
 .hero-title {
     font-family: 'Play', sans-serif;
     font-size: 140px;
     color: var(--color-primary-light);
     line-height: 0.81;
     text-transform: capitalize;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.header-nav {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    gap: 240px;
+}
+
+.header-menu {
+    display: flex;
+    gap: 56px;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.nav-social {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.nav-icon {
+    fill: var(--color-primary-dark);
+}
+
+.nav-icon:hover {
+    fill: var(--color-primary-light);
 }
 
 /* Buttons */
@@ -105,12 +170,43 @@ footer a:hover {
     border-radius: 32px;
     border: 2px solid var(--color-primary-light);
     cursor: pointer;
+    padding: 16px 32px 16px 32px;
+    margin-bottom: 16px;
 }
 
 .main-button:hover {
     color: var(--color-primary-dark);
     background-color: transparent;
     border: 2px solid var(--color-primary-light);
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 272px 0;
+    background-image: url('../images/header-background.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+}
+
+.hero-container {
+    width: 100%;
+    max-width: 973px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-family: 'Play', sans-serif;
+    font-size: 140px;
+    color: var(--color-primary-light);
+    line-height: 0.81;
+    text-transform: capitalize;
+    margin: 16px 0 40px 0;
+}
+
+.button-info {
+    font-size: 12px;
+    color: var(--color-darkgray);
 }
 
 /* Brand Section */
@@ -141,6 +237,10 @@ footer a:hover {
     font-size: 18px;
 }
 
+.advantages-icon {
+    fill: var(--color-primary-light);
+}
+
 /* Procedures Section */
 .procedures-item {
     color: var(--color-primary-default);
@@ -157,3 +257,10 @@ footer {
     background-color: var(--color-primary-dark);
 }
 
+.footer-icon {
+    fill: var(--color-primary-default);
+}
+
+.footer-icon:hover {
+    fill: var(--color-primary-light);
+}
