@@ -49,6 +49,11 @@ body {
     font-weight: 400;
     margin: 0;
     padding: 0;
+    position: relative;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 h1,
@@ -100,6 +105,7 @@ ul {
 .header-link {
     font-size: 18px;
     color: var(--color-primary-dark);
+    transition: .2s;
 }
 
 .header-link:hover {
@@ -108,6 +114,7 @@ ul {
 
 footer a {
     color: var(--color-primary-default);
+    transition: .2s;
 }
 
 footer a:hover {
@@ -116,10 +123,15 @@ footer a:hover {
 
 /* Header */
 .header {
-    background-color: #e7e4e4; /* remove */
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(5px);
     height: 106px;
     display: flex;
     align-items: center;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
 }
 
 .hero-title {
@@ -159,6 +171,7 @@ footer a:hover {
 
 .nav-icon {
     fill: var(--color-primary-dark);
+    transition: .2s;
 }
 
 .nav-icon:hover {
@@ -176,6 +189,7 @@ footer a:hover {
     cursor: pointer;
     padding: 16px 32px 16px 32px;
     margin-bottom: 16px;
+    transition: .2s;
 }
 
 .main-button:hover {
@@ -187,9 +201,9 @@ footer a:hover {
 /* Hero Section */
 .hero-section {
     padding: 272px 0;
-    background-image: url('../images/header-background.jpg');
+    background: linear-gradient(89deg, #FFF 30.62%, rgba(255, 255, 255, 0.85) 41.31%, rgba(255, 255, 255, 0.19) 58.65%, rgba(255, 255, 255, 0.00) 72.78%), url('../images/header-background.jpg');
     background-repeat: no-repeat;
-    background-position: center top;
+    background-position: right top;
     background-size: cover;
 }
 
@@ -212,6 +226,10 @@ footer a:hover {
 .button-info {
     font-size: 12px;
     color: var(--color-darkgray);
+}
+
+.hero-subtitle {
+    font-size: 18px;
 }
 
 /* Brand Section */
@@ -315,8 +333,21 @@ footer {
     margin-top: 94px;
 }
 
+.footer::after {
+    content: '';
+    width: 280px;
+    height: 170px;
+    background-image: url(../images/footer-img.png);
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    bottom: 0;
+    right: 0;
+}
+
 .footer-icon {
     fill: var(--color-primary-default);
+    transition: .2s;
 }
 
 .footer-icon:hover {
