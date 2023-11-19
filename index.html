@@ -172,15 +172,56 @@
             <iframe
               class="contacts-map"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.932390054582!2d30.515600376881256!3d50.44235998794592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cef8b5f6338d%3A0x25c7f06ad686451c!2z0LHRg9C7LiDQotCw0YDQsNGB0LAg0KjQtdCy0YfQtdC90LrQviwgNSwg0JrQuNC10LIsINCj0LrRgNCw0LjQvdCwLCAwMjAwMA!5e0!3m2!1sru!2spl!4v1699344621974!5m2!1sru!2spl"
-              width="600"
-              height="450"
               style="border: 0"
               allowfullscreen=""
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
-            <div class="contacts-form">
-              <h3>Запишіться безкоштовно та отримайте подарунок</h3>
+            <div class="contacts-section-form">
+              <h3 class="contacts-form-title">
+                Запишіться <span class="accent">безкоштовно</span> та отримайте
+                подарунок
+              </h3>
+              <form name="contacts-form" autocomplete="off">
+                <div class="contacts-form-field">
+                  <input
+                    class="contacts-form-input"
+                    type="text"
+                    id="user-fullname"
+                    name="user-fullname"
+                    placeholder="Ваше ім'я та прізвище"
+                    required
+                  />
+                </div>
+                <div class="contacts-form-field">
+                  <input
+                    class="contacts-form-input"
+                    type="tel"
+                    id="user-tel"
+                    name="user-tel"
+                    placeholder="Ваш номер телефону"
+                    required
+                  />
+                </div>
+                <div class="contacts-form-field">
+                  <input
+                    class="contacts-form-input"
+                    type="email"
+                    id="user-email"
+                    name="user-email"
+                    placeholder="Ваша електронна пошта"
+                    required
+                  />
+                </div>
+
+                <button class="contacts-form-button" type="submit">
+                  Записатись безкоштовно
+                </button>
+                <p class="contacts-form-btn-info">
+                  Натискаючи на кнопку я погоджуюсь
+                  <a href="#">з політикою конфіденційності</a>
+                </p>
+              </form>
             </div>
           </div>
         </div>
